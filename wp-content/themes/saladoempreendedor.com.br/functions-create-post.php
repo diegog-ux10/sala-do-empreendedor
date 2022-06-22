@@ -253,3 +253,40 @@
     
         add_action( 'init', 'register_shopping_post_type' );
 
+
+         //Registro do tipo de postagem para Atendimentos
+
+         function register_attendance_post_type() {
+
+            $attendance_labels = array(
+                'name'               => __( 'Atendimentos' ),
+                'singular_name'      => __( 'Atendimentos' ),
+                'add_new'            => __( 'Adicionar Novo Atendimentos' ),
+                'add_new_item'       => __( 'Adicionar Novo Atendimentos' ),
+                'edit_item'          => __( 'Editar' ),
+                'new_item'           => __( 'Novo Atendimentos' ),
+                'all_items'          => __( 'Listar Todos os Atendimentos' ),
+                'view_item'          => __( 'Ver Atendimentos Anterior' ),
+                'search_items'       => __( 'Buscar' ),
+                'featured_image'     => 'Imagem Destacada',
+                'set_featured_image' => 'Adicionar Imagem'
+            );
+    
+            $attendanceConfig = array(
+                'labels'            => $attendance_labels,
+                'description'       => '',
+                'public'            => true,
+                'menu_position'     => 30,
+                'supports'          => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+                'has_archive'       => true,
+                'show_in_admin_bar' => true,
+                'show_in_nav_menus' => true,
+                'menu_icon'         => 'dashicons-welcome-write-blog'
+            );
+    
+            register_post_type( 'attendance', $attendanceConfig );
+    
+        }
+    
+        add_action( 'init', 'register_attendance_post_type' );
+

@@ -18,6 +18,11 @@ $information = dataQueryCards(16, 'information');
 
 $shopping = dataQueryCards(16, 'shopping');
 
+//Consulta de dados de Atendimentos
+
+$attendance = dataQueryCards(16, 'attendance');
+
+
 // consulta de dados de serviços
 $services = new WP_Query(array(
 'posts_per_page' => 16,

@@ -11,7 +11,7 @@
 <section class="home-banner-section principal-container" style=" background-repeat:no-repeat; background-image: url(<?php echo get_theme_file_uri('/assets/img/home-banner.png'); ?>">
     <div class="home-banner-info secondary-container">
         <img src="" alt="">
-        <h1><?php echo __('O seu negócio começa aqui!') ?></h1>
+        <h1>O <span>seu negócio</span> começa aqui!</h1>
     </div>
 </section>
 
@@ -26,7 +26,7 @@
 
                         <a href="<?php echo get_field('link') ?>;" target="_blank" class="card-link">
                             <div class="card">
-                                <?php echo get_the_post_thumbnail(); ?>
+                                <img src="http://saladoempreendedor.com.br.test/wp-content/uploads/2022/06/printer-1.png" alt="">
                                 <h3><?php echo __(the_title()) ?></h3>
                             </div> 
                         </a>
@@ -165,16 +165,16 @@
     </div>
 </section>
 
-<!-- seção de Tutoriais-->
+<!-- seção de Atendimento-->
 
-<section class="principal-container tutorial">
-    <div class="secondary-container tutorial-container">
-        <h2 class="title-white"><?php echo __('Tutoriais') ?></h2>
+<section class="principal-container attendance">
+    <div class="secondary-container attendance-container">
+        <h2 class="title-white"><?php echo __("Atendimento aos MEI'S no Poupa Tempo") ?></h2>
         <div class="list-container">
             <!-- loop para exibir serviços -->
             <ul class="list">
-                <?php while($tutorial->have_posts()):
-                    $tutorial->the_post(); ?>
+                <?php while($attendance->have_posts()):
+                    $attendance->the_post(); ?>
                         <li>                                                     
                             <a href="<?php echo get_field('link') ?>;" target="_blank" class="list-link"><?php the_content(); ?></a>
                         </li>            
@@ -184,6 +184,55 @@
         </div>
     </div>
 </section>
+
+<footer class="principal-container">
+    <div class="secondary-container footer">
+        <div class="footer-column location">
+            <h3>Localização</h3>
+            <span>R. Octaviano Teixeira dos Santos, 1000 - Centro, Francisco Beltrão - PR, 85601-030</span>
+            <span>Telefone: (46) 3520-2121</span>
+            <img src="#" alt="">
+        </div>
+        <div class="footer-column prefecture">
+            <h3>Prefeitura On-line</h3>
+            <ul class="list-columns">
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+                <li><a href="#">list element</a></li>
+            </ul>
+        </div>
+        <div class="footer-column public">
+            <h3>Órgãos Públicos</h3>
+            <ul>
+                 <li><a href="#">list element</a></li>
+                 <li><a href="#">list element</a></li>
+                 <li><a href="#">list element</a></li>
+                 <li><a href="#">list element</a></li>
+                 <li><a href="#">list element</a></li>
+            </ul>
+            <span><a href="#">enlace</a></span>
+            <span><a href="#">enlace</a></span>
+        </div>
+        <div class="footer-column social">
+            <ul>
+                <li><a href=""><img src="" alt=""><span></span></a></li>
+                <li><a href=""><img src="" alt=""><span></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <span>2020 - Prefeitura Municipal de Francisco Beltrão - Paraná. Todos os direitos reservados </span>
+</footer>
 
 <?php wp_footer() ?>
 </body>
