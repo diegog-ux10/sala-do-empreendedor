@@ -26,7 +26,7 @@
 
                         <a href="<?php echo get_field('link') ?>;" target="_blank" class="card-link">
                             <div class="card">
-                                <img src="http://saladoempreendedor.com.br.test/wp-content/uploads/2022/06/printer-1.png" alt="">
+                                <img src="<?php echo get_the_post_thumbnail_url()?>" alt="">
                                 <h3><?php echo __(the_title()) ?></h3>
                             </div> 
                         </a>
