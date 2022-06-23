@@ -144,13 +144,13 @@
 </section>
 
 <!-- seção de Escritório de Compras -->
-<section class="principal-container information">
-    <div class="secondary-container information-container">
+<section class="principal-container shopping">
+    <div class="secondary-container shopping-container">
         <h2 class="title-blue"><?php echo __('Escritório de Compras') ?></h2>
         <div class="cards-container">
             <!-- loop para exibir Escritório de Compras -->
-            <?php while($information->have_posts()):
-                    $information->the_post(); ?>
+            <?php while($shopping->have_posts()):
+                    $shopping->the_post(); ?>
 
                         <a href="<?php echo get_field('link') ?>;" target="_blank" class="card-link">
                             <div class="card">
@@ -170,70 +170,26 @@
 <section class="principal-container attendance">
     <div class="secondary-container attendance-container">
         <h2 class="title-white"><?php echo __("Atendimento aos MEI'S no Poupa Tempo") ?></h2>
-        <div class="list-container">
-            <!-- loop para exibir serviços -->
-            <ul class="list">
-                <?php while($attendance->have_posts()):
-                    $attendance->the_post(); ?>
-                        <li>                                                     
-                            <a href="<?php echo get_field('link') ?>;" target="_blank" class="list-link"><?php the_content(); ?></a>
-                        </li>            
-                <?php endwhile; ?>                        
-            </ul>
-            
-        </div>
+        <div class="two-columns">
+            <div class="list-container">
+                <!-- loop para exibir serviços -->
+                <ul class="list">
+                    <?php while($attendance->have_posts()):
+                        $attendance->the_post(); ?>
+                            <li>                                                     
+                                <?php the_content(); ?>
+                            </li>            
+                    <?php endwhile; ?>                        
+                </ul>            
+            </div>
+            <div class="second-columns">
+                <h3>Localização Poupa Tempo</h3>
+                <span>Poupa Tempo São Miguel: Rua Presidente Getulio Vargas, 937</span>
+                <span>Poupa Tempo Cidade Norte: Av. Atílio Fontana, 2704</span>
+            </div>
+        </div>        
     </div>
 </section>
 
-<footer class="principal-container">
-    <div class="secondary-container footer">
-        <div class="footer-column location">
-            <h3>Localização</h3>
-            <span>R. Octaviano Teixeira dos Santos, 1000 - Centro, Francisco Beltrão - PR, 85601-030</span>
-            <span>Telefone: (46) 3520-2121</span>
-            <img src="#" alt="">
-        </div>
-        <div class="footer-column prefecture">
-            <h3>Prefeitura On-line</h3>
-            <ul class="list-columns">
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-                <li><a href="#">list element</a></li>
-            </ul>
-        </div>
-        <div class="footer-column public">
-            <h3>Órgãos Públicos</h3>
-            <ul>
-                 <li><a href="#">list element</a></li>
-                 <li><a href="#">list element</a></li>
-                 <li><a href="#">list element</a></li>
-                 <li><a href="#">list element</a></li>
-                 <li><a href="#">list element</a></li>
-            </ul>
-            <span><a href="#">enlace</a></span>
-            <span><a href="#">enlace</a></span>
-        </div>
-        <div class="footer-column social">
-            <ul>
-                <li><a href=""><img src="" alt=""><span></span></a></li>
-                <li><a href=""><img src="" alt=""><span></span></a></li>
-            </ul>
-        </div>
-    </div>
-    <span>2020 - Prefeitura Municipal de Francisco Beltrão - Paraná. Todos os direitos reservados </span>
-</footer>
-
-<?php wp_footer() ?>
-</body>
-</html>
+<!-- chamando o rodapie -->
+<?php get_footer() ?>
