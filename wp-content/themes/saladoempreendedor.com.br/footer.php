@@ -2,9 +2,9 @@
     <div class="secondary-container footer">
         <div class="footer-column location">
             <h3>Localização</h3>
-            <span>R. Octaviano Teixeira dos Santos, 1000 - Centro, Francisco Beltrão - PR, 85601-030</span>
+            <span>Rua Peru, 1250, Luther King no Parque de Exposições</span>
             <span>Telefone: (46) 3520-2121</span>
-            <img src="<?php echo get_theme_file_uri() . '/assets/img/logo-footer.jpg' ?>" alt="">
+            <img src="<?php echo get_theme_file_uri() . '/assets/img/logo-footer.png' ?>" alt="">
         </div>
         <div class="footer-column prefecture">
             <h3>Prefeitura On-line</h3>
@@ -44,7 +44,7 @@
             </ul>
         </div>
     </div>
-    <span>2020 - Prefeitura Municipal de Francisco Beltrão - Paraná. Todos os direitos reservados </span>
+    <span><?php echo date('Y'); ?>- Prefeitura Municipal de Francisco Beltrão - Paraná. Todos os direitos reservados </span>
 </footer>
 <?php wp_footer() ?>
 </body>

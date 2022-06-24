@@ -38,3 +38,8 @@ wp-config.php
 # ignore dev CEICOM
 
 /wp-content/themes/saladoempreendedor.com.br/assets/dev/
+
+# duplicator
+
+/wp-content/backups-dup-pro/
+/wp-content/plugins/duplicator-pro/

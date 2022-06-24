@@ -5,6 +5,8 @@ function dataQueryCards($posts, $name) {
 $query = new WP_Query(array(
     'posts_per_page' => $posts,
     'post_type' => $name,
+    'orderby'=> 'post_date', 
+    'order' => 'DESC',
 ));
 
 return $query;
@@ -24,42 +26,19 @@ $attendance = dataQueryCards(16, 'attendance');
 
 
 // consulta de dados de serviços
-$services = new WP_Query(array(
-'posts_per_page' => 16,
-'post_type' => 'services',
-));
+$services = dataQueryCards(16, 'services');
 
 // consulta de dados de nota fiscal
-$nota = new WP_Query(array(
-'posts_per_page' => 16,
-'post_type' => 'nota',
-));
+$nota = dataQueryCards(16, 'nota');
 
 // consulta de dados de nota fiscal
-$tutorial = new WP_Query(array(
-'posts_per_page' => 16,
-'post_type' => 'tutorial',
-));
+$tutorial = dataQueryCards(16, 'tutorial');
 
 // consulta de dados de certidoe
-$certificate = new WP_Query(array(
-'posts_per_page' => 16,
-'post_type' => 'certificates',
-));
+$certificate = dataQueryCards(16, 'certificates');
 
 // consulta de dados de credito
-$credit = new WP_Query(array(
-'posts_per_page' => 16,
-'post_type' => 'credits',
-));
-
-// consulta de dados de credito
-$credit = new WP_Query(array(
-'posts_per_page' => 16,
-'post_type' => 'credits',
-));
-
-
+$credit = dataQueryCards(16, 'credits');
 
 
 ?>

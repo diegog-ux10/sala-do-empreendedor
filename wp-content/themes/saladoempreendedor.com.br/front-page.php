@@ -68,7 +68,7 @@
                 <?php while($tutorial->have_posts()):
                     $tutorial->the_post(); ?>
                         <li>                                                     
-                            <a href="<?php echo get_field('link') ?>;" target="_blank" class="list-link"><?php the_content(); ?></a>
+                            <a href="<?php echo get_field('link') ?>;" target="_blank" class="list-link"><?php the_title(); ?></a>
                         </li>            
                 <?php endwhile; ?>                        
             </ul>
@@ -177,7 +177,7 @@
                     <?php while($attendance->have_posts()):
                         $attendance->the_post(); ?>
                             <li>                                                     
-                                <?php the_content(); ?>
+                                <?php the_title(); ?>
                             </li>            
                     <?php endwhile; ?>                        
                 </ul>            
